@@ -1,0 +1,10 @@
+# 排除 PDF 文件
+*.pdf
+
+# 排除 args.txt 和 warnings.txt
+args.txt
+warnings.txt
+
+# 排除用户配置
+.codewhale/
+.deepseek/
