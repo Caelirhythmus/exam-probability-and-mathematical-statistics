@@ -74,7 +74,7 @@ title: "概率论与数理统计试卷（提高卷）"
    $$
    f(x)=
    \begin{cases}
-   a x^2 + b x + c, & 0<x<1,\\
+   a x^2 + b x + c, & 0\le x\le 1,\\
    0, & \text{其他}
    \end{cases}
    $$  
@@ -92,10 +92,10 @@ title: "概率论与数理统计试卷（提高卷）"
 
 5. 设 $X_1,X_2,\ldots,X_n$ 为来自总体 $X$ 的样本，总体 $X$ 的概率密度函数为  
    $$
-   f(x;\theta)=
+   f(x)=
    \begin{cases}
-   \theta x^{\theta-1}, & 0<x<1,\\
-   0, & \text{其他}
+   \theta^2 x e^{-\theta x}, & x>0,\\
+   0, & \text{其他},
    \end{cases}
    \quad (\theta>0)
    $$  
@@ -113,7 +113,7 @@ title: "概率论与数理统计试卷（提高卷）"
 
 2. 已知某种零件的尺寸服从正态分布 $N(\mu,\sigma^2)$，其中 $\mu,\sigma^2$ 均未知。现随机抽取16件，测得样本均值 $\bar{x}=12.5\,\text{cm}$，样本标准差 $s=0.8\,\text{cm}$。取显著性水平 $\alpha=0.05$：  
    (1) 求 $\mu$ 的置信水平为 $1-\alpha$ 的置信区间；  
-   (2) 检验假设 $H_0:\sigma^2=0.5$ 与 $H_1:\sigma^2\neq 0.5$。
+   (2) 检验假设 $H_0:\sigma^2=0.5$ vs $H_1:\sigma^2\neq 0.5$。
 
 ## 六、证明题（每小题10分，共10分）
 
