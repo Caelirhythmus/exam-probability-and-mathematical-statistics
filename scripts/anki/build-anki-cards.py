@@ -1,7 +1,7 @@
 """
 Anki 制卡工具
 将 collections.md 转换为 Anki 可导入的 TSV 文件。
-每条记录生成 2 张卡：「主题 → 路径」「求解 → 路径」。
+每条记录生成 1 张卡，正面同时显示「主题」和「求解」。
 """
 
 import os
@@ -55,10 +55,11 @@ def main():
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("正面\t背面\n")
         for topic, solve, path in records:
-            f.write(f"主题：{topic}\t路径：{path}\n")
-            f.write(f"求解：{solve}\t路径：{path}\n")
+            front = f"主题：{topic}  求解：{solve}"
+            back = f"路径：{path}"
+            f.write(f"{front}\t{back}\n")
 
-    print(f"已生成 {len(records) * 2} 张卡片 → {output_path}")
+    print(f"已生成 {len(records)} 张卡片 → {output_path}")
 
 if __name__ == "__main__":
     main()
