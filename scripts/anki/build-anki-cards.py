@@ -11,10 +11,10 @@ import glob
 def find_cards_dir(start_dir="."):
     """从工作目录开始，查找 cards/ 目录"""
     for root, dirs, files in os.walk(start_dir):
-        if os.path.basename(root) == "cards":
+        if os.path.basename(root) == "1-cards":
             return root
     # 回退：直接检查 1-collections/cards/
-    candidate = os.path.join(start_dir, "1-collections", "cards")
+    candidate = os.path.join(start_dir, "1-collections", "1-cards")
     if os.path.isdir(candidate):
         return candidate
     return None
@@ -66,7 +66,6 @@ def main():
 
     output_path = os.path.join(cards_dir, "..", "anki-cards.tsv")
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write("正面\t背面\n")
         for topic, solve, path in all_records:
             front = f"主题：{topic}  求解：{solve}"
             back = f"路径：{path}"
