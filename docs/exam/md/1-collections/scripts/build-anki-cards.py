@@ -1,0 +1,1 @@
+D:/______tmp______/_school/exam-probability-and-mathematical-statistics/scripts/anki/build-anki-cards.py
